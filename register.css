@@ -1,0 +1,173 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:#ff8a2a;
+
+background-image:
+radial-gradient(circle at 10% 10%, #ffb347 90px, transparent 100px),
+radial-gradient(circle at 90% 20%, #ff9a00 70px, transparent 80px),
+radial-gradient(circle at 15% 90%, #ff7b00 80px, transparent 90px),
+radial-gradient(circle at 95% 95%, #ffb347 70px, transparent 80px);
+
+}
+
+/* contenedor */
+
+.register-container{
+
+background:white;
+width:360px;
+padding:40px;
+border-radius:20px;
+text-align:center;
+
+box-shadow:0 20px 50px rgba(0,0,0,0.25);
+
+}
+
+/* logo */
+
+.logo{
+width:260px;        /* tamaño del logo */
+max-width:100%;     /* evita que rompa el contenedor */
+display:block;
+margin:0 auto 10px auto;
+}
+
+/* titulo */
+
+h2{
+
+margin-bottom:5px;
+color:#333;
+
+}
+
+p{
+
+color:#777;
+font-size:14px;
+margin-bottom:15px;
+
+}
+
+/* inputs */
+
+.input-box{
+
+position:relative;
+margin:12px 0;
+
+}
+
+.input-box i{
+
+position:absolute;
+left:15px;
+top:50%;
+transform:translateY(-50%);
+color:#999;
+
+}
+
+.input-box input{
+
+width:100%;
+padding:12px 12px 12px 40px;
+border-radius:10px;
+border:1px solid #ddd;
+font-size:14px;
+
+}
+
+/* terminos */
+
+.terms{
+
+font-size:13px;
+margin:10px 0;
+color:#555;
+
+}
+
+/* boton */
+
+.btn-register{
+
+width:100%;
+padding:12px;
+border:none;
+border-radius:25px;
+margin-top:10px;
+
+background:linear-gradient(90deg,#ff9a00,#ff6a00);
+color:white;
+
+font-size:16px;
+font-weight:600;
+
+cursor:pointer;
+
+}
+
+.btn-register:hover{
+
+opacity:0.9;
+
+}
+
+/* login link */
+
+.login-link{
+
+margin-top:15px;
+
+}
+
+.login-link a{
+
+color:#ff6a00;
+text-decoration:none;
+font-weight:600;
+
+}
+
+/* google */
+
+.google-btn{
+
+margin-top:15px;
+
+width:100%;
+padding:10px;
+
+border-radius:20px;
+border:1px solid #ddd;
+
+background:white;
+
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+
+cursor:pointer;
+
+}
+
+.google-btn img{
+
+width:20px;
+
+}
