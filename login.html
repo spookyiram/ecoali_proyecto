@@ -6,6 +6,9 @@
     <title>Login</title>
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Script oficial de Google -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
 
@@ -42,12 +45,33 @@
                 <span>o</span>
             </div>
 
-            <button type="button" class="google-btn">
-                <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="Google">
-                Iniciar sesión con Google
-            </button>
+            <!-- LOGIN CON GOOGLE -->
+            <div id="g_id_onload"
+                data-client_id="906898809451-v11m3ec2ifkf3ctif8evf1upunegjdt5.apps.googleusercontent.com"
+                data-callback="handleCredentialResponse"
+                data-auto_prompt="false">
+            </div>
+
+            <div class="g_id_signin"
+                data-type="standard"
+                data-size="large"
+                data-theme="outline"
+                data-text="signin_with"
+                data-shape="pill"
+                data-logo_alignment="left">
+            </div>
+
         </form>
     </div>
+
+<script>
+function handleCredentialResponse(response) {
+    const token = response.credential;
+    console.log("Token de Google:", token);
+
+    // Aquí puedes enviar el token al backend
+}
+</script>
 
 </body>
 </html>
