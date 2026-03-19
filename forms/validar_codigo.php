@@ -3,12 +3,12 @@ session_start();
 require "conexion.php";
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: register.php");
+    header("Location: ../register.php");
     exit;
 }
 
 if (!isset($_SESSION["email_registro"])) {
-    header("Location: register.php");
+    header("Location: ../register.php");
     exit;
 }
 
@@ -17,7 +17,7 @@ $codigo = trim($_POST["codigo"] ?? "");
 
 if (empty($codigo)) {
     $_SESSION["mensaje"] = "Debes ingresar el código.";
-    header("Location: verificar_codigo.php");
+    header("Location: ../verificar_codigo.php");
     exit;
 }
 
@@ -34,13 +34,12 @@ if ($result->num_rows > 0) {
     $stmtUpdate->execute();
 
     $_SESSION["email_verificado"] = $email;
-    unset($_SESSION["codigo_prueba"]);
 
-   header("Location: completar_registro.php");
-exit;
+    header("Location: ../completar_registro.php");
+    exit;
 } else {
     $_SESSION["mensaje"] = "El código es incorrecto.";
-    header("Location: verificar_codigo.php");
+    header("Location: ../verificar_codigo.php");
     exit;
 }
 ?>

@@ -6,15 +6,15 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - ECOALI</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
 
     <div class="login-container">
-        <img src="imagenes/logo.png" alt="Logo ECOALI" class="logo">
+        <img src="assets/imagenes/logo.jpeg" class="logo" alt="Logo ECOALI">
 
         <h2>Bienvenido de nuevo</h2>
         <p>Inicie sesión para continuar</p>
@@ -37,7 +37,7 @@ session_start();
             </div>
         <?php endif; ?>
 
-        <form action="procesar_login.php" method="POST">
+        <form action="forms/procesar_login.php" method="POST">
             <div class="input-box">
                 <i class="fa fa-user"></i>
                 <input type="text" name="usuario" placeholder="Usuario" required>
@@ -66,14 +66,14 @@ session_start();
             <span>o</span>
         </div>
 
-    <div id="g_id_onload"
-     data-client_id="610699907925-g8kf8c126tvsncvip1d1dne4h4b55khh.apps.googleusercontent.com"
-     data-callback="handleCredentialResponse">
-</div>
+        <div id="g_id_onload"
+             data-client_id="610699907925-g8kf8c126tvsncvip1d1dne4h4b55khh.apps.googleusercontent.com"
+             data-callback="handleCredentialResponse">
+        </div>
 
         <div id="google-btn" class="google-btn-box"></div>
 
-        <form id="googleLoginForm" action="google_login.php" method="POST" style="display:none;">
+        <form id="googleLoginForm" action="forms/google_login.php" method="POST" style="display:none;">
             <input type="hidden" name="credential" id="credential">
         </form>
     </div>

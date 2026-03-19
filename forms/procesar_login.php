@@ -7,7 +7,7 @@ $password = $_POST["password"] ?? "";
 
 if (empty($usuario) || empty($password)) {
     $_SESSION["mensaje"] = "Completa usuario y contraseña.";
-    header("Location: login.php");
+    header("Location: ../login.php");
     exit;
 }
 
@@ -22,7 +22,7 @@ $resultado = $stmt->get_result();
 
 if ($resultado->num_rows === 0) {
     $_SESSION["mensaje"] = "Usuario no encontrado.";
-    header("Location: login.php");
+    header("Location: ../login.php");
     exit;
 }
 
@@ -30,13 +30,13 @@ $user = $resultado->fetch_assoc();
 
 if ((int)$user["activo"] !== 1) {
     $_SESSION["mensaje"] = "Tu cuenta está inactiva.";
-    header("Location: login.php");
+    header("Location: ../login.php");
     exit;
 }
 
 if (!password_verify($password, $user["password_hash"])) {
     $_SESSION["mensaje"] = "Contraseña incorrecta.";
-    header("Location: login.php");
+    header("Location: ../login.php");
     exit;
 }
 
@@ -47,5 +47,6 @@ $_SESSION["nombre"] = $user["nombre"];
 $_SESSION["apellido"] = $user["apellido"];
 $_SESSION["email"] = $user["email"];
 
-header("Location: dashboard.php");
+header("Location: ../dashboard.php");
 exit;
+?>

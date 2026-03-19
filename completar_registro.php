@@ -1,6 +1,6 @@
 <?php
 session_start();
-require "conexion.php";
+require "forms/conexion.php";
 
 if (!isset($_SESSION["email_verificado"])) {
     header("Location: register.php");
@@ -20,13 +20,12 @@ $resultRoles = $conn->query($sqlRoles);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Completar registro - ECOALI</title>
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="assets/css/register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
 <div class="register-container">
-    
 
     <h2>Completar registro</h2>
     <p>Correo validado: <strong><?php echo htmlspecialchars($email); ?></strong></p>
@@ -40,7 +39,7 @@ $resultRoles = $conn->query($sqlRoles);
         </div>
     <?php endif; ?>
 
-    <form action="guardar_usuario.php" method="POST">
+    <form action="forms/guardar_usuario.php" method="POST">
 
         <div class="input-box">
             <i class="fa fa-user"></i>

@@ -15,7 +15,7 @@ $email = $_SESSION["email_registro"];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificar código - ECOALI</title>
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="assets/css/register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -34,9 +34,7 @@ $email = $_SESSION["email_registro"];
         </div>
     <?php endif; ?>
 
-    
-
-    <form action="validar_codigo.php" method="POST">
+    <form action="forms/validar_codigo.php" method="POST">
         <div class="input-box">
             <i class="fa fa-key"></i>
             <input type="text" name="codigo" placeholder="Ingresa el código" maxlength="6" required>

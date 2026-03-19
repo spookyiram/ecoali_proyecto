@@ -2,13 +2,13 @@
 session_start();
 require "conexion.php";
 require "config_mail.php";
-require "vendor/autoload.php";
+require "../vendor/autoload.php";
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: register.php");
+    header("Location: ../register.php");
     exit;
 }
 
@@ -16,13 +16,13 @@ $email = trim($_POST["email"] ?? "");
 
 if (empty($email)) {
     $_SESSION["mensaje"] = "Debes ingresar un correo.";
-    header("Location: register.php");
+    header("Location: ../register.php");
     exit;
 }
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $_SESSION["mensaje"] = "El correo no tiene un formato válido.";
-    header("Location: register.php");
+    header("Location: ../register.php");
     exit;
 }
 
@@ -35,7 +35,7 @@ $resultCorreo = $stmtCorreo->get_result();
 
 if ($resultCorreo->num_rows > 0) {
     $_SESSION["mensaje"] = "Ese correo ya está registrado.";
-    header("Location: register.php");
+    header("Location: ../register.php");
     exit;
 }
 
@@ -55,7 +55,7 @@ $stmtInsert->bind_param("ss", $email, $codigo);
 
 if (!$stmtInsert->execute()) {
     $_SESSION["mensaje"] = "Error al generar el código.";
-    header("Location: register.php");
+    header("Location: ../register.php");
     exit;
 }
 
@@ -67,7 +67,7 @@ try {
     $mail->SMTPAuth   = true;
     $mail->Username   = MAIL_USERNAME;
     $mail->Password   = MAIL_PASSWORD;
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->SMTPSecure = defined('MAIL_ENCRYPTION') ? MAIL_ENCRYPTION : PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port       = MAIL_PORT;
     $mail->CharSet    = 'UTF-8';
 
@@ -93,12 +93,12 @@ try {
 
     $_SESSION["email_registro"] = $email;
     $_SESSION["mensaje"] = "Te enviamos un codigo de verificacion a tu correo.";
-    header("Location: verificar_codigo.php");
+    header("Location: ../verificar_codigo.php");
     exit;
 
 } catch (Exception $e) {
     $_SESSION["mensaje"] = "No se pudo enviar el correo. Error: " . $mail->ErrorInfo;
-    header("Location: register.php");
+    header("Location: ../register.php");
     exit;
 }
 ?>
