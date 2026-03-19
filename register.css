@@ -171,3 +171,13 @@ cursor:pointer;
 width:20px;
 
 }
+
+.input-box select{
+    width:100%;
+    padding:12px 12px 12px 40px;
+    border-radius:10px;
+    border:1px solid #ddd;
+    font-size:14px;
+    outline:none;
+    background:white;
+}
