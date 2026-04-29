@@ -1,0 +1,661 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #1f211f;
+  font-family: "Manrope", Arial, sans-serif;
+  color: #462800;
+}
+
+.gestin-de-inventario {
+  width: calc(100% - 36px);
+  min-height: calc(100vh - 36px);
+  margin: 18px;
+  padding-left: 250px;
+  position: relative;
+  background: #fff5ed;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0,0,0,.25);
+}
+
+.gestin-de-inventario .organic-background {
+  position: absolute;
+  top: -90px;
+  right: -80px;
+  width: 360px;
+  height: 360px;
+  background: #ff8a00;
+  border-radius: 50%;
+  filter: blur(50px);
+  opacity: .45;
+}
+
+.gestin-de-inventario .background-blur {
+  position: absolute;
+  left: -120px;
+  bottom: 90px;
+  width: 300px;
+  height: 300px;
+  background: #9df197;
+  border-radius: 50%;
+  filter: blur(55px);
+  opacity: .45;
+}
+
+.gestin-de-inventario .div {
+  position: absolute;
+  right: -40px;
+  bottom: -60px;
+  width: 280px;
+  height: 280px;
+  background: #9df197;
+  border-radius: 50%;
+  filter: blur(55px);
+  opacity: .45;
+}
+
+.gestin-de-inventario .aside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: rgba(255,245,237,.92);
+  border-radius: 0 34px 34px 0;
+  padding: 30px 18px;
+  box-shadow: 18px 0 45px rgba(70,40,0,.10);
+  z-index: 5;
+}
+
+.gestin-de-inventario .container-13 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px 32px;
+}
+
+.gestin-de-inventario .text-27 {
+  color: #176a21;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.gestin-de-inventario .background-10 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffeedf;
+  padding: 12px;
+  border-radius: 22px;
+  margin-bottom: 26px;
+}
+
+.gestin-de-inventario .avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #ff8a00;
+  border: 2px solid #ff8a00;
+}
+
+.gestin-de-inventario .text-28 {
+  color: #462800;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.gestin-de-inventario .text-29 {
+  color: #996e3f;
+  font-size: 11px;
+}
+
+.gestin-de-inventario .nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gestin-de-inventario .link,
+.gestin-de-inventario .link-active-state {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.gestin-de-inventario .link-active-state {
+  background: linear-gradient(90deg, #8d4a00, #ff8a00);
+}
+
+.gestin-de-inventario .text-30 {
+  color: #462800;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.gestin-de-inventario .text-31 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.gestin-de-inventario .button-wrapper {
+  position: absolute;
+  bottom: 28px;
+  left: 28px;
+}
+
+.gestin-de-inventario .button-5 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #b02500;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.gestin-de-inventario .text-32 {
+  color: #b02500;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.gestin-de-inventario .header-topappbar {
+  height: 70px;
+  padding: 0 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,245,237,.72);
+  backdrop-filter: blur(12px);
+  position: relative;
+  z-index: 3;
+}
+
+.gestin-de-inventario .text-26 {
+  color: #176a21;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.gestin-de-inventario .main-content {
+  position: relative;
+  z-index: 2;
+  padding: 30px 36px 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.gestin-de-inventario .section-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.gestin-de-inventario .container {
+  flex: 1;
+  position: relative;
+}
+
+.gestin-de-inventario .input {
+  height: 48px;
+  background: #fff;
+  border-radius: 999px;
+  padding: 0 22px 0 52px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 12px 30px rgba(70,40,0,.05);
+}
+
+.gestin-de-inventario .text-wrapper {
+  color: #9a7247;
+  font-size: 13px;
+}
+
+.gestin-de-inventario .icon-wrapper {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+.gestin-de-inventario .container-2 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.gestin-de-inventario .background-shadow {
+  display: flex;
+  background: #ffdcbb;
+  border-radius: 999px;
+  padding: 4px;
+}
+
+.gestin-de-inventario .button,
+.gestin-de-inventario .div-wrapper {
+  border: none;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: transparent;
+}
+
+.gestin-de-inventario .button {
+  background: #8d4a00;
+}
+
+.gestin-de-inventario .text {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.gestin-de-inventario .text-2 {
+  color: #7a5427;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.gestin-de-inventario .button-2 {
+  border: none;
+  border-radius: 999px;
+  padding: 13px 22px;
+  background: linear-gradient(90deg, #8d4a00, #ff8a00);
+  color: #fff;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  box-shadow: 0 18px 35px rgba(141,74,0,.20);
+}
+
+.gestin-de-inventario .text-3 {
+  color: #fff;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.gestin-de-inventario .status-overviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.gestin-de-inventario .background-border,
+.gestin-de-inventario .background-border-2,
+.gestin-de-inventario .background-border-3 {
+  background: #fff;
+  border-radius: 26px;
+  padding: 22px;
+  box-shadow: 0 20px 40px rgba(70,40,0,.06);
+  border: 1px solid rgba(213,164,112,.12);
+}
+
+.gestin-de-inventario .container-4,
+.gestin-de-inventario .container-6,
+.gestin-de-inventario .container-7 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gestin-de-inventario .overlay,
+.gestin-de-inventario .img-wrapper,
+.gestin-de-inventario .overlay-4 {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.gestin-de-inventario .overlay {
+  background: rgba(157,241,151,.25);
+}
+
+.gestin-de-inventario .img-wrapper {
+  background: rgba(253,212,0,.25);
+}
+
+.gestin-de-inventario .overlay-4 {
+  background: rgba(249,86,48,.18);
+}
+
+.gestin-de-inventario .overlay-2,
+.gestin-de-inventario .overlay-3,
+.gestin-de-inventario .overlay-5 {
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+.gestin-de-inventario .overlay-2 {
+  background: rgba(157,241,151,.35);
+}
+
+.gestin-de-inventario .overlay-3 {
+  background: rgba(253,212,0,.35);
+}
+
+.gestin-de-inventario .overlay-5 {
+  background: rgba(249,86,48,.25);
+}
+
+.gestin-de-inventario .text-4,
+.gestin-de-inventario .text-5,
+.gestin-de-inventario .text-6 {
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.gestin-de-inventario .text-4 {
+  color: #176a21;
+}
+
+.gestin-de-inventario .text-5 {
+  color: #6d5a00;
+}
+
+.gestin-de-inventario .text-6 {
+  color: #b02500;
+}
+
+.gestin-de-inventario .text-wrapper-2 {
+  margin-top: 15px;
+  color: #996e3f;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.gestin-de-inventario .text-wrapper-3 {
+  color: #462800;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.gestin-de-inventario .inventory-table {
+  background: #fff;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 22px 42px rgba(70,40,0,.07);
+  border: 1px solid rgba(213,164,112,.10);
+}
+
+.gestin-de-inventario .header {
+  background: #ffeedf;
+}
+
+.gestin-de-inventario .row,
+.gestin-de-inventario .row-disponible,
+.gestin-de-inventario .div-3 {
+  display: grid;
+  grid-template-columns: 1.2fr 1.6fr 1fr 1fr 1fr 1fr 1.4fr .8fr;
+  align-items: center;
+}
+
+.gestin-de-inventario .row > div,
+.gestin-de-inventario .row-disponible > div,
+.gestin-de-inventario .div-3 > div {
+  width: auto !important;
+  padding: 17px 18px !important;
+}
+
+.gestin-de-inventario .text-7,
+.gestin-de-inventario .text-8,
+.gestin-de-inventario .text-9 {
+  color: #7a5427;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .5px;
+}
+
+.gestin-de-inventario .div-3 {
+  border-top: 1px solid rgba(213,164,112,.16);
+}
+
+.gestin-de-inventario .text-10 {
+  color: #8d4a00;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.gestin-de-inventario .text-11,
+.gestin-de-inventario .text-12,
+.gestin-de-inventario .text-14,
+.gestin-de-inventario .text-18 {
+  color: #462800;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.gestin-de-inventario .background-wrapper,
+.gestin-de-inventario .data-9,
+.gestin-de-inventario .data-15 {
+  display: flex;
+  justify-content: center;
+}
+
+.gestin-de-inventario .background-2,
+.gestin-de-inventario .overlay-8 {
+  background: #ffdcbb;
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+
+.gestin-de-inventario .text-13,
+.gestin-de-inventario .text-19 {
+  color: #8d4a00;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.gestin-de-inventario .overlay-6,
+.gestin-de-inventario .overlay-7,
+.gestin-de-inventario .overlay-9,
+.gestin-de-inventario .overlay-10 {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  padding: 5px 10px;
+}
+
+.gestin-de-inventario .overlay-6 {
+  background: rgba(157,241,151,.25);
+}
+
+.gestin-de-inventario .overlay-7 {
+  background: rgba(253,212,0,.25);
+}
+
+.gestin-de-inventario .overlay-9 {
+  background: rgba(249,86,48,.18);
+}
+
+.gestin-de-inventario .overlay-10 {
+  background: rgba(255,138,0,.14);
+}
+
+.gestin-de-inventario .background-3,
+.gestin-de-inventario .background-5,
+.gestin-de-inventario .background-7,
+.gestin-de-inventario .background-9 {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.gestin-de-inventario .background-3 {
+  background: #176a21;
+}
+
+.gestin-de-inventario .background-5 {
+  background: #edc600;
+}
+
+.gestin-de-inventario .background-7 {
+  background: #b02500;
+}
+
+.gestin-de-inventario .background-9 {
+  background: #ff8a00;
+}
+
+.gestin-de-inventario .text-15,
+.gestin-de-inventario .text-17,
+.gestin-de-inventario .text-21,
+.gestin-de-inventario .text-22 {
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.gestin-de-inventario .text-15 {
+  color: #176a21;
+}
+
+.gestin-de-inventario .text-17 {
+  color: #6d5a00;
+}
+
+.gestin-de-inventario .text-21 {
+  color: #b02500;
+}
+
+.gestin-de-inventario .text-22 {
+  color: #8d4a00;
+}
+
+.gestin-de-inventario .data-6 {
+  display: none;
+}
+
+.gestin-de-inventario .pagination-like {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,238,223,.55);
+  padding: 14px 22px;
+}
+
+.gestin-de-inventario .p {
+  color: #996e3f;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.gestin-de-inventario .container-8 {
+  display: flex;
+  gap: 8px;
+}
+
+.gestin-de-inventario .container-wrapper,
+.gestin-de-inventario .button-3,
+.gestin-de-inventario .button-4 {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  display: grid;
+  place-items: center;
+}
+
+.gestin-de-inventario .button-3 {
+  background: #8d4a00;
+}
+
+.gestin-de-inventario .container-wrapper,
+.gestin-de-inventario .button-4 {
+  background: #ffe3ca;
+}
+
+.gestin-de-inventario .text-23 {
+  color: #fff;
+  font-weight: 900;
+}
+
+.gestin-de-inventario .text-24 {
+  color: #462800;
+  font-weight: 800;
+}
+
+.gestin-de-inventario .inventory-forecast {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.gestin-de-inventario .overlay-11,
+.gestin-de-inventario .overlay-12 {
+  position: relative;
+  border-radius: 26px;
+  padding: 28px;
+  overflow: hidden;
+}
+
+.gestin-de-inventario .overlay-11 {
+  background: rgba(23,106,33,.12);
+}
+
+.gestin-de-inventario .overlay-12 {
+  background: rgba(255,138,0,.14);
+}
+
+.gestin-de-inventario .text-wrapper-4 {
+  color: #176a21;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.gestin-de-inventario .text-wrapper-5 {
+  color: #8d4a00;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.gestin-de-inventario .text-25 {
+  color: #7a5427;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1200px) {
+  .gestin-de-inventario {
+    padding-left: 0;
+  }
+
+  .gestin-de-inventario .aside {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 0 0 28px 28px;
+  }
+
+  .gestin-de-inventario .main-content {
+    padding: 28px 18px 70px;
+  }
+
+  .gestin-de-inventario .section-search,
+  .gestin-de-inventario .container-2 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .gestin-de-inventario .status-overviews,
+  .gestin-de-inventario .inventory-forecast {
+    grid-template-columns: 1fr;
+  }
+
+  .gestin-de-inventario .inventory-table {
+    overflow-x: auto;
+  }
+
+  .gestin-de-inventario .row,
+  .gestin-de-inventario .row-disponible,
+  .gestin-de-inventario .div-3 {
+    min-width: 1000px;
+  }
+}
