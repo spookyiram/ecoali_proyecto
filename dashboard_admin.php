@@ -16,150 +16,150 @@ $nombre = $_SESSION["nombre"] ?? "Admin";
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard Administrador</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel de Control - ECOALI</title>
 
-  <link rel="stylesheet" href="assets/css/globals.css">
-  <link rel="stylesheet" href="assets/css/admin.css">
+<link rel="stylesheet" href="assets/css/globals.css">
+<link rel="stylesheet" href="assets/css/inventario_admin.css">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
+<div class="gestin-de-inventario">
 
-<div class="admin-page">
+  <div class="organic-background"></div>
+  <div class="background-blur"></div>
+  <div class="div"></div>
 
-  <aside class="sidebar">
-    <div class="profile">
-      <div class="avatar">🥚</div>
-      <div>
-        <h3><?php echo htmlspecialchars($nombre); ?> Ecoali</h3>
-        <p>Gestión Global</p>
+  <div class="aside">
+    <div class="margin">
+      <div class="container-13">
+        <div class="div-4"><div class="text-27">ECOALI</div></div>
       </div>
     </div>
 
-    <nav class="menu">
-      <a class="active">▦ Dashboard</a>
-      <a href="inventario_admin.php">▣ Inventario</a>
-      <a>◈ Proveedores</a>
-      <a>▤ Logística</a>
-      <a>▥ Reportes</a>
-    </nav>
-  </aside>
-
-  <main class="content">
-
-    <header class="topbar">
-      <h1>Panel de Control</h1>
-      <p>Gestión integral de producción y logística</p>
-
-      <div class="actions">
-        <button class="btn-light">Exportar PDF</button>
-        <button class="btn-main">+ Nueva Orden</button>
-        <a href="logout.php" class="logout">Salir</a>
-      </div>
-    </header>
-
-    <section class="metrics">
-      <div class="card metric">
-        <span>USUARIOS ACTIVOS</span>
-        <h2>1,284</h2>
-      </div>
-
-      <div class="card metric">
-        <span>VENTAS TOTALES</span>
-        <h2>$45.2k</h2>
-      </div>
-
-      <div class="card metric">
-        <span>STOCK DE HUEVOS</span>
-        <h2>8,420</h2>
-      </div>
-
-      <div class="card metric">
-        <span>RUTAS ACTIVAS</span>
-        <h2>14</h2>
-      </div>
-    </section>
-
-    <section class="grid-main">
-      <div class="card chart">
-        <h3>Producción Semanal</h3>
-        <div class="chart-empty">
-          <span>Lun</span>
-          <span>Mar</span>
-          <span>Mié</span>
-          <span>Jue</span>
-          <span>Vie</span>
+    <div class="margin-2">
+      <div class="background-10">
+        <div class="avatar"></div>
+        <div class="div-4">
+          <div class="div-2"><div class="text-28"><?php echo htmlspecialchars($nombre); ?></div></div>
+          <div class="div-2"><div class="text-29">Gestión Pro</div></div>
         </div>
       </div>
+    </div>
 
-      <div class="card quick">
-        <h3>Accesos Directos</h3>
+    <div class="nav">
+      <a class="link-active-state" href="dashboard_admin.php">
+        <div class="link-active-state-2"></div>
+        <div class="div-4"><div class="text-31">Dashboard</div></div>
+      </a>
 
-        <div class="quick-grid">
-          <button>👥<span>Usuarios</span></button>
-          <button>🏠<span>Granjas</span></button>
-          <button>📦<span>Stock</span></button>
-          <button>🧾<span>Facturas</span></button>
-        </div>
+      <a class="link" href="inventario_admin.php">
+        <div class="div-4"><div class="text-30">Inventario</div></div>
+      </a>
 
-        <div class="notice">
-          Tienes 3 solicitudes de nuevos proveedores pendientes de revisión.
-        </div>
+      <a class="link" href="proveedores_admin.php">
+        <div class="div-4"><div class="text-30">Proveedores</div></div>
+      </a>
+
+      <a class="link" href="logistica_admin.php">
+        <div class="div-4"><div class="text-30">Logística</div></div>
+      </a>
+
+      <a class="link" href="reportes_admin.php">
+        <div class="div-4"><div class="text-30">Reportes</div></div>
+      </a>
+    </div>
+
+    <div class="button-wrapper">
+      <a href="logout.php" class="button-5">
+        <div class="container-3"><div class="text-32">Cerrar Sesión</div></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="header-topappbar">
+    <div class="div-4"><div class="text-26">Panel de Control</div></div>
+
+    <div style="display:flex; gap:12px;">
+      <button class="button-2"><div class="text-3">Exportar PDF</div></button>
+      <button class="button-2"><div class="text-3">+ Nueva Orden</div></button>
+    </div>
+  </div>
+
+  <div class="main-content">
+
+    <div class="status-overviews">
+      <div class="background-border">
+        <div class="container-5"><div class="text-wrapper-2">Usuarios Activos</div></div>
+        <div class="div-2"><div class="text-wrapper-3">1,284</div></div>
       </div>
-    </section>
 
-    <section class="bottom-grid">
-      <div class="card">
-        <div class="card-head">
-          <h3>Últimos Pedidos</h3>
-          <a>Ver todos</a>
-        </div>
+      <div class="background-border-2">
+        <div class="container-5"><div class="text-wrapper-2">Ventas Totales</div></div>
+        <div class="div-2"><div class="text-wrapper-3">$45.2k</div></div>
+      </div>
 
-        <div class="order">
-          <div>#ORD-4592 <small>Hace 15 min</small></div>
-          <strong>$450.00</strong>
-        </div>
+      <div class="background-border-3">
+        <div class="container-5"><div class="text-wrapper-2">Stock de Huevos</div></div>
+        <div class="div-2"><div class="text-wrapper-3">8,420</div></div>
+      </div>
+    </div>
 
-        <div class="order">
-          <div>#ORD-4591 <small>Hace 2 horas</small></div>
-          <strong>$1,200.00</strong>
-        </div>
+    <div class="inventory-forecast">
+      <div class="overlay-11">
+        <div class="heading"><div class="text-wrapper-4">Producción Semanal</div></div>
+        <p class="text-25">Resumen de producción semanal por granja y clasificación de productos.</p>
+      </div>
 
-        <div class="order">
-          <div>#ORD-4590 <small>Hoy, 10:24 AM</small></div>
-          <strong>$234.50</strong>
+      <div class="overlay-12">
+        <div class="heading"><div class="text-wrapper-5">Accesos Directos</div></div>
+        <p class="text-25">Usuarios, granjas, stock y facturas disponibles para consulta rápida.</p>
+      </div>
+    </div>
+
+    <div class="inventory-table">
+      <div class="header">
+        <div class="row">
+          <div><div class="text-7">ÚLTIMOS PEDIDOS</div></div>
+          <div><div class="text-7">CLIENTE</div></div>
+          <div><div class="text-7">FECHA</div></div>
+          <div><div class="text-8">TOTAL</div></div>
+          <div><div class="text-7">ESTADO</div></div>
+          <div><div class="text-9">ACCIÓN</div></div>
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-head">
-          <h3>Proveedores Destacados</h3>
-          <a>Ver mapa</a>
-        </div>
-
-        <div class="provider">
-          <div class="egg"></div>
-          <div>
-            <strong>Granja La Aurora</strong>
-            <small>Huevos Orgánicos • Premium</small>
-          </div>
-          <span>★ 4.9</span>
-        </div>
-
-        <div class="provider">
-          <div class="egg"></div>
-          <div>
-            <strong>Hortalizas del Valle</strong>
-            <small>Vegetales • Sostenible</small>
-          </div>
-          <span>★ 4.7</span>
-        </div>
+      <div class="row-disponible">
+        <div><div class="text-10">#ORD-4592</div></div>
+        <div><div class="text-11">Carlos Mendoza</div></div>
+        <div><div class="text-14">Hace 15 min</div></div>
+        <div><div class="background-2"><div class="text-13">$450.00</div></div></div>
+        <div><div class="overlay-6"><div class="background-3"></div><div class="text-15">Completado</div></div></div>
+        <div><div class="text-10">Ver</div></div>
       </div>
-    </section>
 
-  </main>
+      <div class="div-3">
+        <div><div class="text-10">#ORD-4591</div></div>
+        <div><div class="text-11">Lucía Fernández</div></div>
+        <div><div class="text-14">Hace 2 horas</div></div>
+        <div><div class="background-2"><div class="text-13">$1,200.00</div></div></div>
+        <div><div class="overlay-7"><div class="background-5"></div><div class="text-17">Pendiente</div></div></div>
+        <div><div class="text-10">Ver</div></div>
+      </div>
 
+      <div class="div-3">
+        <div><div class="text-10">#ORD-4590</div></div>
+        <div><div class="text-11">Roberto Gómez</div></div>
+        <div><div class="text-14">Hoy, 10:24 AM</div></div>
+        <div><div class="background-2"><div class="text-13">$234.50</div></div></div>
+        <div><div class="overlay-6"><div class="background-3"></div><div class="text-15">Completado</div></div></div>
+        <div><div class="text-10">Ver</div></div>
+      </div>
+    </div>
+
+  </div>
 </div>
-
 </body>
 </html>
